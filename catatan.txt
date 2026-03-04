@@ -1,0 +1,33 @@
+sosial media mini merupakan aplikasi latihan crud saya menggunakan next js pages router
+dimana orang orang dapat melihat seluruh postingan dari orang lain atau diri sendiri serta bisa menambahkan like, dan comment 
+
+role : 
+    -user
+    -admin
+
+database : 
+    -prisma(ORM)
+    -mysql
+
+auth : next auth
+
+cloud storage : cloudinary
+
+stack : fullstack next js
+
+
+1. hari pertama setup agar menggunakan wsl ubuntu dan merangkai rencana
+
+
+2. hari kedua eksekusi rencana membuat halaman
+tanggal 4 maret :
+    - fokus untuk setup next auth
+minimal : 
+    - menampilkan halaman Login
+    - menampilkan halaman Register
+    - menampilkan halaman utama(halaman daftar postingan)
+
+maximal : 
+    - membereskan auth (credentials, google)
+    - membereskan registrasi
+
