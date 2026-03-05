@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function LoginView() {
     return (<>
         <form className="space-y-4">
@@ -33,7 +35,7 @@ export default function LoginView() {
         </button>
         <p className="text-center text-sm text-gray-600 mt-6">
             Don't have account?
-            <a className="text-amber-600 font-medium">Register</a>
+            <Link href={"/register"} className="text-amber-600 font-medium">Register</Link>
         </p>
     </>)
 }
