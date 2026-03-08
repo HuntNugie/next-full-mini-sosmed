@@ -5,11 +5,37 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../src/generated/prisma"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+enum ROLE {
+  user
+  admin
+}
+
+model User {
+  id         String        @id @default(cuid())
+  email      String        @unique
+  password   String
+  role       ROLE          @default(user)
+  created_at DateTime      @default(now())
+  // relasi dengan profile
+  profile    User_profile?
+}
+
+model User_profile {
+  id       String @id @default(cuid())
+  username String @unique
+  fullname String
+  age      Int
+  photo    String
+  // relasi one to one dengan table user
+  user_id  String @unique
+  user     User   @relation(fields: [user_id], references: [id])
 }
